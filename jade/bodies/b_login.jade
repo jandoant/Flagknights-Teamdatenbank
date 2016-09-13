@@ -1,0 +1,22 @@
+// Login-HEADER
+nav.navbar.navbar-default
+  .container-fluid
+    // Brand and toggle get grouped for better mobile display
+    .navbar-header
+      a.navbar-brand(href='#') Teamdatenbank
+      p.navbar-text.navbar-right Flag Knights
+      
+// Login-FORMULAR
+.container
+  form.form-signin(action='php/func/login.func.php', method='POST')
+    h2.form-signin-heading Anmeldung
+    label.sr-only(for='loginEmail') Email
+    input#loginEmail.form-control(type='email', name='loginEmail', placeholder='Email', required='', autofocus='')
+    label.sr-only(for='loginPassword') Passwort
+    input#loginPassword.form-control(type='password', name='loginPasswort', placeholder='Password', required='')
+    .checkbox
+      label
+        input(type='checkbox', value='remember-me')
+        |  Angaben merken
+    button.btn.btn-lg.btn-success.btn-block(type='submit', name='loginSubmit') Anmelden
+// /container

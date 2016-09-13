@@ -1,0 +1,53 @@
+// MODAL
+#myPersonModal.modal.fade(role='dialog')
+  .modal-dialog
+    form(action='dashboard.php?s=personen&action=add', method='post')
+      // Modal CONTENT
+      .modal-content
+        // Modal HEADER
+        .modal-header
+          button.close(type='button', data-dismiss='modal') ×
+          h4.modal-title Person hinzufügen
+        // Modal BODY
+        .modal-body
+          .container-fluid
+            // Rolle
+            .row
+              .form-group.col-lg-6
+                label(for='rolle') Rolle
+                select.form-control(name='rolle')                  
+            // Namen
+            .row
+              .form-group.col-lg-6
+                label(for='vorname') Vorname
+                input#vorname.form-control(type='text', name='vorname', placeholder='Vorname')
+              .form-group.col-lg-6
+                label(for='nachname') Nachname
+                input#nachname.form-control(type='text', name='nachname', placeholder='Nachname')
+            // Geburtsdatum
+            .row
+              .form-group.col-lg-6
+                label(for='geburtsdatum') Geburtsdatum
+                input#geburtsdatum.form-control(type='text', name='geburtsdatum', placeholder='TT.MM.YYYY')
+            // Straße und PLZ
+            .row
+              .form-group.col-lg-6
+                label(for='strasse') Adresse
+                input#strasse.form-control(type='text', name='strasse', placeholder='Straße')
+              .form-group.col-lg-6
+                label(for='plz') Ort
+                input#plz.form-control(type='text', name='plz', placeholder='PLZ')
+            // aktives Mitglied
+            .row
+              .form-group.col-lg-6
+                input(type='checkbox', name='aktiv', value='checked')
+                label(for='aktiv') aktives Mitglied?
+            // angemeldet
+            .row
+              .form-group.col-lg-6
+                input(type='checkbox', name='angemeldet', value='checked')
+                label(for='angemeldet') im Verein angemeldet?
+        // Modal FOOTER
+        .modal-footer
+          button.btn.btn-default(type='sumbit', name='submit_addperson') Speichern...
+          button.btn.btn-default(type='cancel', data-dismiss='modal') Abbrechen

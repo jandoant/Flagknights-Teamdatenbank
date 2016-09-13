@@ -1,0 +1,44 @@
+// TOPNAV
+header
+  nav.navbar.navbar-inverse.navbar-fixed-top
+    .container-fluid
+      .navbar-header
+        button.navbar-toggle.collapsed(type='button', data-toggle='collapse', data-target='#navbar', aria-expanded='false', aria-controls='navbar')
+          span.sr-only Toggle navigation
+          span.icon-bar
+          span.icon-bar
+          span.icon-bar
+        a.navbar-brand(href='#') Flag Knights
+      #navbar.navbar-collapse.collapse
+        ul.nav.navbar-nav.navbar-right
+          li
+            a(href='dashboard.php') Übersicht
+          li
+            a(href='dashboard.php?s=termine&action=overview') Termine
+          li
+            a(href='dashboard.php?s=profil') Profil
+          li
+            a(href='backend/func/logout.func.php') LogOut
+        form.navbar-form.navbar-right
+          input.form-control(type='text', placeholder='Spieler suchen...')
+
+.container-fluid
+  .row
+    .col-sm-3.col-md-3.col-lg-2.sidebar
+      ul.nav.nav-sidebar
+        li.active
+          a(href='#')
+            | Overview 
+            span.sr-only (current)
+        li
+          a(href='dashboard.php?s=termine&action=overview') Termine verwalten
+        li
+          a(href='dashboard.php?s=personen&action=overview') Personen verwalten
+        li
+          a(href='#') Statistik
+    
+    //CONTENT
+    main.col-sm-9.col-sm-offset-3.col-md-9.col-md-offset-3.col-lg-10.col-lg-offset-2.content
+      |<?php 
+      |include('php/func/navigation.func.php') 
+      |?>

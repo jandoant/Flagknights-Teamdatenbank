@@ -1,0 +1,13 @@
+//output: ../php/inc/personen_overview.inc.php
+include modals/modal_add_player.jade
+
+h1 Personenübersicht
+.container-fluid  
+  // BUTTON um Modal einzublenden
+  .row
+    button.btn.btn-med.btn-success(type='button', data-toggle='modal', data-target='#myPersonModal') + Neue Person hinzufügen
+  .row
+    include tables/tabelle_personen.jade
+    
+  
+    

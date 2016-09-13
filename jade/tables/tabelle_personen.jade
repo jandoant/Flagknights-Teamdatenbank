@@ -1,0 +1,12 @@
+table#tabelle_personen.table.table-bordered.table-responsive.table-hover.table-personen
+  thead
+    tr
+      th(data-sort='string', title='nach Nachnamen sortieren') Nachname
+      th(data-sort='string', title='nach Vornamen sortieren') Vorname
+      th(data-sort='int', title='nach Alter sortieren') Alter
+      th
+    tbody
+      |<?php
+      |include 'php/render/tabelle_personen.rend.php'; 
+      |?>
+  

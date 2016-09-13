@@ -1,0 +1,90 @@
+<table id ="stupidtable" class="table-bordered">
+	<thead>
+		<tr>
+			<th data-sort="int" >Lfd. Nr.</th>
+			<th data-sort="string">Name</th>
+			<th data-sort="int">Punkte</th>
+			<th data-sort="float">Note</th>
+			<th data-sort="string">Bemerkung</th>
+		</tr>
+	</thead>
+	<tbody>
+		<tr class='clickable-row' data-href='http://www.chemnitz-crusaders.de' >
+			<td>1</td>
+			<td>Matthias</td>
+			<td>9</td>
+			<td>2.5</td>
+			<td>Normal</td>
+		</tr>
+		<tr>
+			<td>2</td>
+			<td>Gunnar</td>
+			<td>12</td>
+			<td>1.2</td>
+			<td><b>Fett</b></td>
+		</tr>
+		<tr>
+			<td>3</td>
+			<td>Christian</td>
+			<td>8</td>
+			<td>3.5</td>
+			<td><i>Kursiv</i></td>
+		</tr>
+		<tr>
+			<td>4</td>
+			<td>Janosch</td>
+			<td>11</td>
+			<td>1,4</td>
+			<td><a href="#">Link</a></td>
+		</tr>
+		<tr>
+			<td>5</td>
+			<td>Raoul</td>
+			<td>10</td>
+			<td>2.1</td>
+			<td><b><a href="#">Fetter Link</a></b></td>
+		</tr>
+		<tr>
+			<td>6</td>
+			<td>Jürgen</td>
+			<td>7</td>
+			<td>3.9</td>
+			<td><h2>Überschrift</h2></td>
+		</tr>
+	</tbody>
+  <tfoot>
+		<tr>
+			<td colspan=5>Stand: 1. 11. 15</td>
+		</tr>
+	</tfoot>
+</table>
+
+<script type="text/javascript">
+  var table = $("#stupidtable").stupidtable();
+
+	table.on("aftertablesort", function (event, data) {
+	      var th = $(this).find("th");
+	      th.find(".arrow").remove();
+	      var dir = $.fn.stupidtable.dir;
+
+	      var arrow = data.direction === dir.ASC ? "&uarr;" : "&darr;";
+	      th.eq(data.column).append('<span class="arrow">' + arrow +'</span>');
+	    });
+
+
+
+
+
+
+
+
+	jQuery(document).ready(function($) {
+    $(".clickable-row").click(function() {
+        window.document.location = $(this).data("href");
+    });
+});
+
+
+
+
+</script>
