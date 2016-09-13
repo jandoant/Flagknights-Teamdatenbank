@@ -3,10 +3,11 @@ include modals/modal_add_player.jade
 
 h1 Personenübersicht
 .container-fluid  
-  // BUTTON um Modal einzublenden
   .row
+    // BUTTON um Modal einzublenden
     button.btn.btn-med.btn-success(type='button', data-toggle='modal', data-target='#myPersonModal') + Neue Person hinzufügen
   .row
+    //PERSONENTABELLE aus Datenbank
     include tables/tabelle_personen.jade
     
   

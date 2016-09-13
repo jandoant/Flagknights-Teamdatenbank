@@ -6,11 +6,11 @@ include 'php/func/date.func.php';
 <html>
   <head>
     <title>Flag Knights - Teamdatenbank</title>
-    <!-- META-->
+    <!--META-->
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <!-- STYLESHEETS-->
+    <!--STYLESHEETS-->
     <link rel="stylesheet" href="css/main.css">
     <link rel="stylesheet" href="css/login.css">
   </head>
@@ -55,10 +55,11 @@ include 'php/func/date.func.php';
       </div>
     </div>
   </body>
-  <!-- JAVASCRIPT-->
-  <!-- jQuery-->
+  <!--JAVASCRIPT-->
   <script src="https://code.jquery.com/jquery-2.2.4.js" integrity="sha256-iT6Q9iMJYuQiMWNd9lDyBUStIq/8PuOW33aOqmvFpqI=" crossorigin="anonymous"></script>
+  <!-- moment.js-->
   <script src="//cdnjs.cloudflare.com/ajax/libs/moment.js/2.9.0/moment-with-locales.js"></script>
+  <!--Bootstrap-->
   <script src="js/bootstrap.js"></script>
   <script src="js/bootstrap-datetimepicker.js"></script>
   <!-- TableSort-->

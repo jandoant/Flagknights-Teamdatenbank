@@ -76,11 +76,12 @@
 </div>
 <h1>Personenübersicht</h1>
 <div class="container-fluid"> 
-  <!-- BUTTON um Modal einzublenden-->
   <div class="row">
+    <!-- BUTTON um Modal einzublenden-->
     <button type="button" data-toggle="modal" data-target="#myPersonModal" class="btn btn-med btn-success">+ Neue Person hinzufügen</button>
   </div>
   <div class="row">
+    <!--PERSONENTABELLE aus Datenbank-->
     <table id="tabelle_personen" class="table table-bordered table-responsive table-hover table-personen">
       <thead>
         <tr>

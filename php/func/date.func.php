@@ -6,8 +6,7 @@ Datum des Formats YYYY-MM-DD um
 */
   function date_german2mysql($date) {
     $d    =    explode(".",$date);
-    return    sprintf("%04d-%02d-%02d", $d[2], $d[1], $d[0]);
-
+    return    saprintf("%04d-%02d-%02d", $d[2], $d[1], $d[0]);
   }
 
 /*
