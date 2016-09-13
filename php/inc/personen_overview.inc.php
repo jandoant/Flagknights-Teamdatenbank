@@ -1,8 +1,10 @@
 
-<!-- MODAL-->
+<?php
+include 'php/func/db_rollen.func.php';
+?>
 <div id="myPersonModal" role="dialog" class="modal fade">
   <div class="modal-dialog">
-    <form action="dashboard.php?s=personen&amp;action=add" method="post">
+    <form action="dashboard.php?s=personen&action=add" method="post">
       <!-- Modal CONTENT-->
       <div class="modal-content">
         <!-- Modal HEADER-->
@@ -17,7 +19,11 @@
             <div class="row">
               <div class="form-group col-lg-6">
                 <label for="rolle">Rolle</label>
-                <select name="rolle" class="form-control">                 </select>
+                <select name="rolle" class="form-control">
+                  <?php
+                  include 'php/render/dropdown_add_person.rend.php';
+                  ?>
+                </select>
               </div>
             </div>
             <!-- Namen-->
@@ -33,9 +39,10 @@
             </div>
             <!-- Geburtsdatum-->
             <div class="row">
-              <div class="form-group col-lg-6">
+              <div id="datepicker" class="form-group col-lg-6">
                 <label for="geburtsdatum">Geburtsdatum</label>
                 <input id="geburtsdatum" type="text" name="geburtsdatum" placeholder="TT.MM.YYYY" class="form-control"/>
+                <script type="text/javascript" src="js/birthday_picker.js"></script>
               </div>
             </div>
             <!-- Straße und PLZ-->

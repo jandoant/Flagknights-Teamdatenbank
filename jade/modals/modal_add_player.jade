@@ -1,7 +1,10 @@
-// MODAL
+|<?php
+|include 'php/func/db_rollen.func.php';
+|?>
+
 #myPersonModal.modal.fade(role='dialog')
   .modal-dialog
-    form(action='dashboard.php?s=personen&action=add', method='post')
+    form(action!="dashboard.php?s=personen&action=add", method='post')
       // Modal CONTENT
       .modal-content
         // Modal HEADER
@@ -15,7 +18,11 @@
             .row
               .form-group.col-lg-6
                 label(for='rolle') Rolle
-                select.form-control(name='rolle')                  
+                select.form-control(name='rolle')
+                  |<?php
+                  |include 'php/render/dropdown_add_person.rend.php';
+                  |?>
+                  
             // Namen
             .row
               .form-group.col-lg-6
@@ -26,9 +33,12 @@
                 input#nachname.form-control(type='text', name='nachname', placeholder='Nachname')
             // Geburtsdatum
             .row
-              .form-group.col-lg-6
+              #datepicker.form-group.col-lg-6
                 label(for='geburtsdatum') Geburtsdatum
                 input#geburtsdatum.form-control(type='text', name='geburtsdatum', placeholder='TT.MM.YYYY')
+                script(type='text/javascript' src="js/birthday_picker.js")
+         
+            
             // Straße und PLZ
             .row
               .form-group.col-lg-6

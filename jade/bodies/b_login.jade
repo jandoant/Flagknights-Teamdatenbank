@@ -1,5 +1,6 @@
+
 // Login-HEADER
-nav.navbar.navbar-default
+nav.navbar.navbar-default.navbar-fixed-top
   .container-fluid
     // Brand and toggle get grouped for better mobile display
     .navbar-header
@@ -9,14 +10,18 @@ nav.navbar.navbar-default
 // Login-FORMULAR
 .container
   form.form-signin(action='php/func/login.func.php', method='POST')
+    //Überschrift
     h2.form-signin-heading Anmeldung
+    //EMAIL-Feld
     label.sr-only(for='loginEmail') Email
     input#loginEmail.form-control(type='email', name='loginEmail', placeholder='Email', required='', autofocus='')
+    //PASSWORT-Feld
     label.sr-only(for='loginPassword') Passwort
     input#loginPassword.form-control(type='password', name='loginPasswort', placeholder='Password', required='')
+    //REMEMBER-Checkbox
     .checkbox
       label
-        input(type='checkbox', value='remember-me')
-        |  Angaben merken
+        input(type='checkbox', value='remember-me') 
+        |Angaben merken
+    //SUBMIT-Button
     button.btn.btn-lg.btn-success.btn-block(type='submit', name='loginSubmit') Anmelden
-// /container

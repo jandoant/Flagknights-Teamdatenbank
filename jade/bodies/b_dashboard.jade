@@ -1,4 +1,5 @@
-// TOPNAV
+
+//TOPNAV
 header
   nav.navbar.navbar-inverse.navbar-fixed-top
     .container-fluid
@@ -12,30 +13,29 @@ header
       #navbar.navbar-collapse.collapse
         ul.nav.navbar-nav.navbar-right
           li
-            a(href='dashboard.php') Übersicht
+            a(href!='dashboard.php') Übersicht
           li
-            a(href='dashboard.php?s=termine&action=overview') Termine
+            a(href!='dashboard.php?s=termine&action=overview') Termine
           li
-            a(href='dashboard.php?s=profil') Profil
+            a(href!='dashboard.php?s=profil') Profil
           li
-            a(href='backend/func/logout.func.php') LogOut
+            a(href!='backend/func/logout.func.php') LogOut
         form.navbar-form.navbar-right
           input.form-control(type='text', placeholder='Spieler suchen...')
 
 .container-fluid
   .row
-    .col-sm-3.col-md-3.col-lg-2.sidebar
+    //SIDENAV
+    aside.col-sm-3.col-md-3.col-lg-2.sidebar
       ul.nav.nav-sidebar
         li.active
-          a(href='#')
-            | Overview 
-            span.sr-only (current)
+          a(href!='#') Overview
         li
-          a(href='dashboard.php?s=termine&action=overview') Termine verwalten
+          a(href!='dashboard.php?s=termine&action=overview') Termine verwalten
         li
-          a(href='dashboard.php?s=personen&action=overview') Personen verwalten
+          a(href!='dashboard.php?s=personen&action=overview') Personen verwalten
         li
-          a(href='#') Statistik
+          a(href!='#') Statistik
     
     //CONTENT
     main.col-sm-9.col-sm-offset-3.col-md-9.col-md-offset-3.col-lg-10.col-lg-offset-2.content

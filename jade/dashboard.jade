@@ -1,9 +1,9 @@
 //output: ../dashboard.php
 doctype html
 |<?php
+|include 'php/func/date.func.php';
 |include 'php/func/personen.func.php';
 |include 'php/func/db.func.php';
-|include 'php/func/date.func.php';
 |?>
 html
   head
@@ -11,12 +11,12 @@ html
     //META
     include base/meta.jade
     //STYLESHEETS
-    include base/stylesheets_login.jade    
+    include base/stylesheets.jade
+    //JAVASCRIPT
+    include base/javascript.jade  
   body 
-    include bodies/b_dashboard.jade       
-  //JAVASCRIPT
-  include base/javascript.jade  
-  
+    include bodies/b_dashboard.jade 
+     
     
     
       

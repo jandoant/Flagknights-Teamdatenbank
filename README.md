@@ -2,17 +2,20 @@
 ##Team Datenbank für Flag Knights
 
 ###TODO
-* Termine erstellen Dialog
-  * Ein-/Ausblenden vergangener Termine
-  * evtl Kopierfunktion für Termine
-* Navigation realisieren über Links mit GET-Variablen
+* Termine erstellen und anzeigen
+  * Formular um neuen Termin zu erstellen
+  * Sortieren nach Art der Termine
+  * Kopierfunktion für Termine
+* Ein-/Ausblenden vergangener Termine
+
 
 ###COMPLETE
 * Login mit Passwort realisieren
-* Person erstellen Dialog
-  * Formular um Person zu erstellen
-* Termine erstellen Dialog
-  * Formular um neuen Termin zu erstellen
-  * Sortieren nach Art der Termine
-  * evtl Kopierfunktion für Termine
+* Person erstellen
+  * Formular um Person zu erstellen (Modal)
+  * Rollen-Auswahl dynamisch aus DB
+  * Person in DB schreiben
+  * Person aus DB löschen
+  * Datepicker Geburtstag
+* Personendetails anzeigen
 * Navigation realisieren über Links mit GET-Variablen

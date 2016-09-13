@@ -33,8 +33,9 @@ function add_person($post)
                     $aktiv."', '".
                     $angemeldet."', '".
                     date_german2mysql(trim($post['geburtsdatum']))."')";
+
     //Datenbankverbindung öffnen
-    require 'backend/db/db_connect.php';
+    require 'php/func/db_connect.php';
     //SQL-Befehl ausführen und Erfolgsvariable setzen
     if (mysqli_query($connection, $sql)) {
         $_SESSION['success_add_person'] = true;
@@ -53,7 +54,7 @@ Zeigt die Detailseite einer Person an
 */
 function detail_person($pid)
 {
-    include 'includes/person_detail.inc.php';
+    include 'php/inc/person_detail.inc.php';
 }
 
 /*
@@ -64,7 +65,7 @@ function delete_person($pid)
   //SQL-Befehl vorbereiten
   $sql = "DELETE FROM personen WHERE person_id = $pid";
   //DB-Verbindung aufbauen
-  require 'backend/db/db_connect.php';
+  require 'php/func/db_connect.php';
   //SQL-Befehl ausführen und Erfolgsvariable setzen
   if (mysqli_query($connection, $sql)) {
       $_SESSION['success_delete_person'] = true;

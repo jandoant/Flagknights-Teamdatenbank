@@ -60,5 +60,5 @@ if (isset($_GET['s'])) {
     }
 } else {
     //--Standardseite
-    include 'includes/dashboard.inc.php';
+    include 'php/inc/overview.inc.php';
 }//ENDE ELSE

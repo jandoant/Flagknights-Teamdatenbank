@@ -12,7 +12,7 @@
   </head>
   <body>
     <!-- Login-HEADER-->
-    <nav class="navbar navbar-default">
+    <nav class="navbar navbar-default navbar-fixed-top">
       <div class="container-fluid">
         <!-- Brand and toggle get grouped for better mobile display-->
         <div class="navbar-header"><a href="#" class="navbar-brand">Teamdatenbank</a>
@@ -23,20 +23,24 @@
     <!-- Login-FORMULAR-->
     <div class="container">
       <form action="php/func/login.func.php" method="POST" class="form-signin">
+        <!--Überschrift-->
         <h2 class="form-signin-heading">Anmeldung</h2>
+        <!--EMAIL-Feld-->
         <label for="loginEmail" class="sr-only">Email</label>
         <input id="loginEmail" type="email" name="loginEmail" placeholder="Email" required="" autofocus="" class="form-control">
+        <!--PASSWORT-Feld-->
         <label for="loginPassword" class="sr-only">Passwort</label>
         <input id="loginPassword" type="password" name="loginPasswort" placeholder="Password" required="" class="form-control">
+        <!--REMEMBER-Checkbox-->
         <div class="checkbox">
           <label>
-            <input type="checkbox" value="remember-me"> Angaben merken
+            <input type="checkbox" value="remember-me">Angaben merken
           </label>
         </div>
+        <!--SUBMIT-Button-->
         <button type="submit" name="loginSubmit" class="btn btn-lg btn-success btn-block">Anmelden</button>
       </form>
     </div>
-    <!-- /container-->
   </body>
   <!--JAVASCRIPT-->
   <script src="https://code.jquery.com/jquery-2.2.4.js" integrity="sha256-iT6Q9iMJYuQiMWNd9lDyBUStIq/8PuOW33aOqmvFpqI=" crossorigin="anonymous"></script>
