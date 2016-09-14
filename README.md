@@ -2,11 +2,10 @@
 ##Team Datenbank für Flag Knights
 
 ###TODO
-* Termine erstellen und anzeigen
-  * Formular um neuen Termin zu erstellen
-  * Sortieren nach Art der Termine
-  * Kopierfunktion für Termine
 * Ein-/Ausblenden vergangener Termine
+* SELECT-Felder der Beteiligungstabelle mit Werten aus DB vorbelegen
+* SELECT Felder der Beteiligungstabelle entsprechend des Status stylen
+* Termine der Beteiligungstabelle etsprechend der Terminart stylen  
 
 
 ###COMPLETE
@@ -17,5 +16,10 @@
   * Person in DB schreiben
   * Person aus DB löschen
   * Datepicker Geburtstag
+* Termin erstellen und anzeigen
+  * Sortieren nach Art der Termine
+  * Formular um neuen Termin zu erstellen
+  * Kopierfunktion für Termine  
 * Personendetails anzeigen
 * Navigation realisieren über Links mit GET-Variablen
+* Terminbeteiligung eintragen in Tabelle und in DB speichern
