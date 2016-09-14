@@ -29,6 +29,12 @@ if (isset($_GET['s'])) {
       include('includes/profil.inc.php');
     break;
 
+    case 'overview':
+      include('php/inc/overview.inc.php');
+      break;
+
+
+
     case 'termine':
       if (isset($_GET['action'])) {
           //je nach Action-Variable wird Funktion ausgeführt

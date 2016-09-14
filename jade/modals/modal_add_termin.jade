@@ -1,0 +1,52 @@
+
+#myTerminModal.modal.fade(role='dialog')
+  .modal-dialog
+    form(action!='dashboard.php?s=termine&action=add', method='post')
+      // Modal content
+      .modal-content
+        // Modal HEADER
+        .modal-header
+          button.close(type='button', data-dismiss='modal') ×
+          h4.modal-title Termin erstellen
+        // Modal BODY
+        .modal-body
+          .container-fluid
+            // Terminart
+            .row
+              .form-group.col-lg-6
+                label(for='terminart') Art des Termins
+                |<?php render_dropdown_terminart();?>                  
+            // Datum & Uhrzeit
+            .row
+              // Datum
+              #datepicker.form-group.col-lg-6
+                label(for='termindatum') Datum
+                input#termindatum.form-control(type='text', name='termindatum', placeholder='TT.MM.YYYY')
+              script(type='text/javascript').
+                $(function () {
+                $('#datepicker input').datetimepicker({
+                format: 'DD.MM.YYYY',
+                locale: 'de'
+                });
+                });
+              // Uhrzeit
+              #timepicker.form-group.col-lg-6
+                label(for='uhrzeit') Uhrzeit
+                input#uhrzeit.form-control(type='text', name='uhrzeit', placeholder='HH:mm')
+              script(type='text/javascript').
+                $(function () {
+                $('#timepicker input').datetimepicker({
+                format: 'HH:mm',
+                locale: 'de'
+                });
+                });
+            // Ort
+            .row
+              .form-group.col-lg-6
+                label(for='terminort') Ort
+                |<?php render_dropdown_ort();?>
+                
+        // Modal FOOTER
+        .modal-footer
+          button.btn.btn-default(type='sumbit', name='submit_addtermin') Speichern...
+          button.btn.btn-default(type='cancel', data-dismiss='modal') Abbrechen

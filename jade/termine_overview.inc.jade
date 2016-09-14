@@ -1,0 +1,23 @@
+//output: ../php/inc/termine_overview.inc.php
+
+include modals/modal_add_termin.jade
+
+h1 Terminübersicht
+.container-fluid  
+  .row
+    // BUTTON um Modal einzublenden
+    button.btn.btn-med.btn-success(type='button', data-toggle='modal', data-target='#myTerminModal') + Neuen Termin hinzufügen
+  
+  .row
+    h3 Training
+    |<?php render_reihe('training');?>
+  .row
+    h3 Turniere
+    |<?php render_reihe('turnier');?>  
+  .row
+    h3 Events
+    |<?php render_reihe('event');?>  
+          
+    
+      
+      

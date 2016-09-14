@@ -1,6 +1,3 @@
-|<?php
-|include 'php/func/db_rollen.func.php';
-|?>
 
 #myPersonModal.modal.fade(role='dialog')
   .modal-dialog
@@ -19,9 +16,7 @@
               .form-group.col-lg-6
                 label(for='rolle') Rolle
                 select.form-control(name='rolle')
-                  |<?php
-                  |include 'php/render/dropdown_add_person.rend.php';
-                  |?>
+                  |<?php render_dropdown_rollen();?>
                   
             // Namen
             .row
@@ -36,9 +31,7 @@
               #datepicker.form-group.col-lg-6
                 label(for='geburtsdatum') Geburtsdatum
                 input#geburtsdatum.form-control(type='text', name='geburtsdatum', placeholder='TT.MM.YYYY')
-                script(type='text/javascript' src="js/birthday_picker.js")
-         
-            
+                script(type='text/javascript' src="js/birthday_picker.js")           
             // Straße und PLZ
             .row
               .form-group.col-lg-6

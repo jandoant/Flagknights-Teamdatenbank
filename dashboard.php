@@ -1,7 +1,9 @@
-<!DOCTYPE html><?php
+<?php session_start();?><!DOCTYPE html><?php
 include 'php/func/date.func.php';
-include 'php/func/personen.func.php';
 include 'php/func/db.func.php';
+include 'php/func/personen.func.php';
+include 'php/func/termine.func.php';
+include 'php/render/render_components.php';
 ?>
 <html>
   <head>
@@ -50,9 +52,9 @@ include 'php/func/db.func.php';
         <!--SIDENAV-->
         <aside class="col-sm-3 col-md-3 col-lg-2 sidebar">
           <ul class="nav nav-sidebar">
-            <li class="active"><a href="#">Overview</a></li>
-            <li><a href="dashboard.php?s=termine&action=overview">Termine verwalten</a></li>
-            <li><a href="dashboard.php?s=personen&action=overview">Personen verwalten</a></li>
+            <li class="active"><a href="dashboard.php?s=overview">Overview</a></li>
+            <li><a href="dashboard.php?s=termine&action=overview" title="Termine verwalten">Termine verwalten</a></li>
+            <li><a href="dashboard.php?s=personen&action=overview" title="Personen verwalten">Personen verwalten</a></li>
             <li><a href="#">Statistik</a></li>
           </ul>
         </aside>

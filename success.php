@@ -26,7 +26,7 @@
       $glyph = 'glyphicon glyphicon-flash';
       $url = 'dashboard.php?s=personen&action=overview';
   }
-  $_SESSION['success_delete_termin']=NULL;
+  $_SESSION['success_delete_person']=NULL;
 
   if (isset($_SESSION['success_delete_termin']) and $_SESSION['success_delete_termin'] == true) {
       $message = 'Der Termin wurde erfolgreich aus der Datenbank entfernt!';

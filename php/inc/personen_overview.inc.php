@@ -1,7 +1,5 @@
 
-<?php
-include 'php/func/db_rollen.func.php';
-?>
+<!--output: ../php/inc/personen_overview.inc.php-->
 <div id="myPersonModal" role="dialog" class="modal fade">
   <div class="modal-dialog">
     <form action="dashboard.php?s=personen&action=add" method="post">
@@ -19,11 +17,7 @@ include 'php/func/db_rollen.func.php';
             <div class="row">
               <div class="form-group col-lg-6">
                 <label for="rolle">Rolle</label>
-                <select name="rolle" class="form-control">
-                  <?php
-                  include 'php/render/dropdown_add_person.rend.php';
-                  ?>
-                </select>
+                <select name="rolle" class="form-control"><?php render_dropdown_rollen();?></select>
               </div>
             </div>
             <!-- Namen-->
@@ -42,7 +36,7 @@ include 'php/func/db_rollen.func.php';
               <div id="datepicker" class="form-group col-lg-6">
                 <label for="geburtsdatum">Geburtsdatum</label>
                 <input id="geburtsdatum" type="text" name="geburtsdatum" placeholder="TT.MM.YYYY" class="form-control"/>
-                <script type="text/javascript" src="js/birthday_picker.js"></script>
+                <script type="text/javascript" src="js/birthday_picker.js">          </script>
               </div>
             </div>
             <!-- Straße und PLZ-->
@@ -97,11 +91,7 @@ include 'php/func/db_rollen.func.php';
           <th data-sort="int" title="nach Alter sortieren">Alter</th>
           <th></th>
         </tr>
-        <tbody>
-          <?php
-          include 'php/render/tabelle_personen.rend.php'; 
-          ?>
-        </tbody>
+        <tbody><?php render_tablebody_personen();?></tbody>
       </thead>
     </table>
   </div>

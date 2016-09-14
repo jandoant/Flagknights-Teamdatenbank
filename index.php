@@ -1,4 +1,5 @@
-<!DOCTYPE html>
+
+<!--output: ../index.php--><!DOCTYPE html>
 <html>
   <head>
     <title>Flag Knights - Teamdatenbank</title>
