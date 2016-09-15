@@ -30,11 +30,17 @@ if (isset($_GET['s'])) {
     break;
 
     case 'overview':
-      include('php/inc/overview.inc.php');
+    if (isset($_GET['action'])) {
+        switch ($_GET['action']) {
+        case 'update':
+          update_overview($_POST);
+        break;
+        case 'view':
+          include 'php/inc/overview.inc.php';
+        break;
+      }
       break;
-
-
-
+    }
     case 'termine':
       if (isset($_GET['action'])) {
           //je nach Action-Variable wird Funktion ausgeführt

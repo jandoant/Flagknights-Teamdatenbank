@@ -77,3 +77,41 @@ function delete_person($pid)
   //Weiterleitung um Erfolgsmeldung anzuzeigen
   header('Location:success.php');
 }
+
+
+function update_overview($post){
+
+  include('php/func/beteiligung.func.php');
+
+  //was passiert, wenn Trainingsbeteiligung eingetragen werden soll
+  if(isset($post['submit_beteiligung'])){
+
+    //alle Termine durchgehen
+    for ($t=0; $t < count($termine_ids) ; $t++) {
+      //alle Personen im jeweiligen Termin durchgehen
+      for ($p=0; $p <count($personen_ids) ; $p++) {
+
+        //POST-Variable des abgeschickten Formulars auswerten
+        //--> für jede Person wird zum jeweiligen Termin
+        //    der angewählte Wert des Select-Felds der Zelle ausgewertet
+        // Name des Select-Feldes: janein_terminID_personID --> eindeutige Identifizierung
+        // Wert des Select Feldes: statusID_terminID_person_ID
+        $select='janein_'.$termine_ids[$t]."_".$personen_ids[$p];
+        //Explodieren des Wertes anhand der "_"
+        $d = explode("_",$post[$select]);
+        $termin_id = $d[1];
+        $person_id = $d[2];
+        $status_id= $d[0];
+        //Für jede Zelle der Tabelle wird der Wert in der DB in Tabelle termine_personen eingefügt oder upgedatet
+        $sql = "INSERT INTO termine_personen (termin_id, person_id, status)
+                VALUES ($termin_id, $person_id, $status_id)
+                ON DUPLICATE KEY UPDATE status= $status_id";
+        query_db($sql);
+        //echo "TerminID: $d[1] --> SpielerID: $d[2] -- > Status: $d[0]";
+        //echo "<br>";
+      }
+    }
+    header('Location:dashboard.php?s=overview&action=view');
+  }
+
+}

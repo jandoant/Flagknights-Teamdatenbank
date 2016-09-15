@@ -3,7 +3,7 @@
 
 ###TODO
 * Ein-/Ausblenden vergangener Termine
-* SELECT-Felder der Beteiligungstabelle mit Werten aus DB vorbelegen
+
 * SELECT Felder der Beteiligungstabelle entsprechend des Status stylen
 * Termine der Beteiligungstabelle etsprechend der Terminart stylen  
 
@@ -22,4 +22,6 @@
   * Kopierfunktion für Termine  
 * Personendetails anzeigen
 * Navigation realisieren über Links mit GET-Variablen
-* Terminbeteiligung eintragen in Tabelle und in DB speichern
+* Terminbeteiligung eintragen
+  * in Tabelle und in DB speichern
+  * SELECT-Felder der Beteiligungstabelle mit Werten aus DB vorbelegen

@@ -52,7 +52,7 @@ include 'php/render/render_components.php';
         <!--SIDENAV-->
         <aside class="col-sm-3 col-md-3 col-lg-2 sidebar">
           <ul class="nav nav-sidebar">
-            <li class="active"><a href="dashboard.php?s=overview">Overview</a></li>
+            <li class="active"><a href="dashboard.php?s=overview&action=view">Overview</a></li>
             <li><a href="dashboard.php?s=termine&action=overview" title="Termine verwalten">Termine verwalten</a></li>
             <li><a href="dashboard.php?s=personen&action=overview" title="Personen verwalten">Personen verwalten</a></li>
             <li><a href="#">Statistik</a></li>
