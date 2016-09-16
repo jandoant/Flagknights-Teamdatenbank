@@ -50,7 +50,7 @@ include 'php/render/render_components.php';
     <div class="container-fluid">
       <div class="row">
         <!--SIDENAV-->
-        <aside class="col-sm-3 col-md-3 col-lg-2 sidebar">
+        <aside class="col-sm-3 col-md-3 col-lg-1 sidebar">
           <ul class="nav nav-sidebar">
             <li class="active"><a href="dashboard.php?s=overview&action=view">Overview</a></li>
             <li><a href="dashboard.php?s=termine&action=overview" title="Termine verwalten">Termine verwalten</a></li>
@@ -59,7 +59,7 @@ include 'php/render/render_components.php';
           </ul>
         </aside>
         <!--CONTENT-->
-        <main class="col-sm-9 col-sm-offset-3 col-md-9 col-md-offset-3 col-lg-10 col-lg-offset-2 content">
+        <main class="col-sm-9 col-sm-offset-3 col-md-9 col-md-offset-3 col-lg-11 col-lg-offset-1 content">
           <?php 
           include('php/func/navigation.func.php') 
           ?>

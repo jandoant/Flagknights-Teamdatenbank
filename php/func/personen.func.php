@@ -64,10 +64,11 @@ function delete_person($pid)
 {
   //SQL-Befehl vorbereiten
   $sql = "DELETE FROM personen WHERE person_id = $pid";
+  $sql2 = "DELETE FROM termine_personen WHERE person_id = $pid";
   //DB-Verbindung aufbauen
   require 'php/func/db_connect.php';
   //SQL-Befehl ausführen und Erfolgsvariable setzen
-  if (mysqli_query($connection, $sql)) {
+  if (mysqli_query($connection, $sql) and mysqli_query($connection, $sql2) ) {
       $_SESSION['success_delete_person'] = true;
   } else {
       $_SESSION['success_delete_person'] = false;
@@ -114,4 +115,18 @@ function update_overview($post){
     header('Location:dashboard.php?s=overview&action=view');
   }
 
+}
+
+function get_trainingsbeteiligung_person($pid){
+
+  $sql_alle = "SELECT termin_id FROM termine";
+  $sql_person = "SELECT person_id FROM termine_personen WHERE status=2 AND person_id =".$pid;
+
+  $result_alle = query_db($sql_alle);
+  $result_person = query_db($sql_person);
+
+  $anz_alle = mysqli_num_rows($result_alle);
+  $anz_person = mysqli_num_rows($result_person);
+
+  return $anz_person/$anz_alle;
 }

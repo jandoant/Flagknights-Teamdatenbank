@@ -57,13 +57,16 @@ body
       color: #fff
       background-color: #2471ff
       &:hover, &:focus
-        color: #fff
-        background-color: #2471ff
-  a
-    color: white
-  li:hover
-    color: green
-    background-color: #3c3c3c
+        border-color: #2471ff
+        border-left-style: solid
+        border-left-width: 10px
+  li>a
+    &:hover
+      color: white
+      border-color: #2471ff
+      border-left-style: solid
+      border-left-width: 3px
+      background-color: lighten(#2d2d2d,2%)
 
 /*
  * Main content

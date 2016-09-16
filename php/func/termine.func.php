@@ -59,10 +59,11 @@ function delete_termin($tid)
 {
   //SQL-Befehl vorbereiten
   $sql = "DELETE FROM termine WHERE termin_id = $tid";
+  $sql2 = "DELETE FROM termine_personen WHERE termin_id = $tid";
   //DB-Verbindung aufbauen
   require 'php/func/db_connect.php';
   //SQL-Befehl ausführen und Erfolgsvariable setzen
-  if (mysqli_query($connection, $sql)) {
+  if (mysqli_query($connection, $sql) and mysqli_query($connection, $sql2) ) {
       $_SESSION['success_delete_termin'] = true;
   } else {
       $_SESSION['success_delete_termin'] = false;
@@ -71,4 +72,14 @@ function delete_termin($tid)
   mysqli_close($connection);
   //Weiterleitung um Erfolgsmeldung anzuzeigen
   header('Location:success.php');
+}
+
+function get_anz_termine($terminart){
+  //sql mit switch bestimmen je nah terminart
+
+  //DB Anfrage ausführen
+
+  //Ergebnis zählen
+
+
 }

@@ -1,6 +1,6 @@
 <?php
   $sql_termine = "SELECT * FROM termine";
-  $sql_personen = "SELECT * FROM personen";
+  $sql_personen = "SELECT * FROM personen WHERE aktiv = 1";
   $sql_status = "SELECT * FROM status";
 
   $result_termine = query_db($sql_termine);

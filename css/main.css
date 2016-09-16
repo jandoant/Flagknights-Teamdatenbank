@@ -8201,17 +8201,17 @@ body {
 }
 
 .nav-sidebar > .active > a:hover, .nav-sidebar > .active > a:focus {
-  color: #fff;
-  background-color: #2471ff;
+  border-color: #2471ff;
+  border-left-style: solid;
+  border-left-width: 10px;
 }
 
-.nav-sidebar a {
+.nav-sidebar li > a:hover {
   color: white;
-}
-
-.nav-sidebar li:hover {
-  color: green;
-  background-color: #3c3c3c;
+  border-color: #2471ff;
+  border-left-style: solid;
+  border-left-width: 3px;
+  background-color: #323232;
 }
 
 /*
@@ -8288,6 +8288,42 @@ hr {
 
 .box-training {
   min-width: 150px;
+}
+
+td.janein2 {
+  background-color: #8bc34a;
+}
+
+td.janein3 {
+  background-color: #00bcd4;
+}
+
+td.janein4 {
+  background-color: #e91e63;
+}
+
+td.janein5 {
+  background-color: #f44336;
+}
+
+td.janein6 {
+  background-color: #ffc107;
+}
+
+td.janein7 {
+  background-color: #795548;
+}
+
+td {
+  width: auto;
+}
+
+tfoot td {
+  text-align: center;
+}
+
+tfoot td:first-child {
+  text-align: left;
 }
 
 /*# sourceMappingURL=main.css.map */
